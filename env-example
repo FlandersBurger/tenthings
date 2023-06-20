@@ -1,0 +1,7 @@
+SECRET_TOKEN=kakapeepee
+
+WORKER_PROCESSES=1
+LISTEN_ON=0.0.0.0:8010
+DATABASE_URL=postgresql://usermcuserface:yeah_right@postgres:5432/deeeebeeee?encoding=utf8&pool=5&timeout=5000
+CACHE_URL=redis://redis:6379/0
+JOB_WORKER_URL=redis://redis:6379/0
