@@ -1,0 +1,96 @@
+[
+  {
+    "Music": [
+      "Artists",
+      "Instruments",
+      "Songs",
+      "Albums",
+      "Bands",
+      "K-pop",
+      "Soundtrack",
+      "Rap",
+      "Rock",
+      "Electronic",
+      "Lyrics",
+      "Awards"
+    ]
+  },
+  {
+    "Television": [
+      "Seasons",
+      "Characters",
+      "Cast",
+      "Reality",
+      "Titles",
+      "K-drama",
+      "Animation",
+      "Anime"
+    ]
+  },
+  {
+    "Movies": [
+      "Awards",
+      "Cast",
+      "Actors",
+      "Characters",
+      "Titles",
+      "Marvel/DC",
+      "Star Wars",
+      "Animation",
+      "Anime"
+    ]
+  },
+  {
+    "Culture": ["Entertainment", "Religion", "Adult", "Art", "Funny", "Food and Drink"]
+  },
+  {
+    "History": [
+      "War/Battles",
+      "Historic Figures",
+      "Countries",
+      "Prehistory",
+      "Asian",
+      "European",
+      "African",
+      "American",
+      "Oceanic"
+    ]
+  },
+  {
+    "Science": ["Geography", "Physics", "Chemistry", "Biology", "Medical", "Mathematics"]
+  },
+  {
+    "Gaming": ["Tabletop", "Puzzle", "Shooter", "Hardware", "Content", "Series"]
+  },
+  {
+    "Sports": ["Athletes", "Teams", "Venues", "Bar Sports", "Brain Sports", "Racing"]
+  },
+  {
+    "Literature": ["Harry Potter", "Middle-Earth", "Manga", "Book Series", "Authors"]
+  },
+  {
+    "Misc": ["Objects"]
+  },
+  {
+    "Society": [
+      "Business",
+      "Transportation",
+      "Cities",
+      "Countries",
+      "Capitals",
+      "Politics",
+      "Leaders",
+      "Celebrities",
+      "Names"
+    ]
+  },
+  {
+    "Language": ["Words", "Foreign", "Synonyms", "Loanwords", "Grammar"]
+  },
+  {
+    "Nature": ["Animals", "Plants"]
+  },
+  {
+    "Technology": ["Internet"]
+  }
+]

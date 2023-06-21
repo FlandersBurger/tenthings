@@ -45,3 +45,32 @@ Category.create([
   { name: 'Television' },
   { name: 'Transportation' },
 ])
+
+languages = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'languages.json')))
+
+approved_languages = languages.filter do |language|
+  [
+    'DE', 'EN', 'ES', 'FR', 'HI', 'ID', 'IT', 'JA',
+    'KO', 'LA', 'NL', 'PA', 'PT', 'RU', 'TA', 'TH',
+    'TL', 'TR', 'ZH'
+  ].include?(language['code'])
+end
+
+Language.create(approved_languages.map do |language|
+  language.slice(*Language.column_names.map(&:to_sym))
+end)
+
+approved_languages.each do |approved_language|
+  language = Language.find_by_code(approved_language['code'])
+  english = Language.find_by_code("EN")
+  Translation.create({
+    language:,
+    source: language,
+    translation: approved_language['native'],
+  })
+  Translation.create({
+    language: english,
+    source: language,
+    translation: approved_language['name'],
+  })
+end
