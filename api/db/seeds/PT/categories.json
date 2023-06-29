@@ -1,0 +1,290 @@
+[
+  {
+    "music": {
+      "name": "Música",
+      "subcategories": [
+        { "artists": "Artistas" },
+        { "instruments": "Instrumentos" },
+        { "songs": "Canções" },
+        { "albums": "Álbuns" },
+        { "discography": "Discografia" },
+        { "bands": "Bandas" },
+        { "k_pop": "K-pop" },
+        { "soundtracks": "Trilhas sonoras" },
+        { "musicals": "Musicais" },
+        { "rap": "Rap" },
+        { "rock": "Rock" },
+        { "electronic": "Eletrônica" },
+        { "lyrics": "Letras" },
+        { "awards": "Prêmios" },
+        { "festivals": "Festivais" }
+      ]
+    }
+  },
+  {
+    "television": {
+      "name": "Televisão",
+      "subcategories": [
+        { "seasons": "Temporadas" },
+        { "characters": "Personagens" },
+        { "cast": "Elenco" },
+        { "reality": "Reality" },
+        { "titles": "Títulos" },
+        { "k_drama": "K-drama" },
+        { "animation": "Animação" },
+        { "anime": "Anime" },
+        { "details": "Detalhes" },
+        { "streaming_services": "Serviços de streaming" }
+      ]
+    }
+  },
+  {
+    "movies": {
+      "name": "Filmes",
+      "subcategories": [
+        { "awards": "Prêmios" },
+        { "cast": "Elenco" },
+        { "actors": "Atores" },
+        { "characters": "Personagens" },
+        { "filmography": "Filmografia" },
+        { "titles": "Títulos" },
+        { "marvel_dc": "Marvel/DC" },
+        { "star_wars": "Star Wars" },
+        { "animation": "Animação" },
+        { "anime": "Anime" },
+        { "details": "Detalhes" }
+      ]
+    }
+  },
+  {
+    "culture": {
+      "name": "Cultura",
+      "subcategories": [
+        { "entertainment": "Entretenimento" },
+        { "tradition": "Tradição" },
+        { "celebrations": "Celebrações" },
+        { "religion": "Religião" },
+        { "astrology": "Astrologia" },
+        { "mythology": "Mitologia" },
+        { "fashion": "Moda" },
+        { "adult": "Adulto" },
+        { "visual_arts": "Artes Visuais" },
+        { "performing_arts": "Artes Performáticas" },
+        { "food_drink": "Comida e Bebida" }
+      ]
+    }
+  },
+  {
+    "region": {
+      "name": "Região",
+      "subcategories": [
+        { "africa": "África" },
+        { "antarctica": "Antártida" },
+        { "asia": "Ásia" },
+        { "atlantic_ocean": "Oceano Atlântico" },
+        { "australia": "Austrália" },
+        { "brazil": "Brasil" },
+        { "canada": "Canadá" },
+        { "caribbean": "Caribe" },
+        { "central_america": "América Central" },
+        { "central_asia": "Ásia Central" },
+        { "china": "China" },
+        { "commonwealth": "Commonwealth" },
+        { "east_africa": "África Oriental" },
+        { "egypt": "Egito" },
+        { "europe": "Europa" },
+        { "european_union": "União Europeia" },
+        { "france": "França" },
+        { "germany": "Alemanha" },
+        { "greece": "Grécia" },
+        { "india": "Índia" },
+        { "indian_ocean": "Oceano Índico" },
+        { "indonesia": "Indonésia" },
+        { "italy": "Itália" },
+        { "mediterranean": "Mediterrâneo" },
+        { "mexico": "México" },
+        { "middle_east": "Oriente Médio" },
+        { "north_africa": "Norte da África" },
+        { "north_america": "América do Norte" },
+        { "oceania": "Oceania" },
+        { "ottoman_empire": "Império Otomano" },
+        { "pacific_ocean": "Oceano Pacífico" },
+        { "roman_empire": "Império Romano" },
+        { "russia": "Rússia" },
+        { "russian_empire": "Império Russo" },
+        { "scandinavia": "Escandinávia" },
+        { "spain": "Espanha" },
+        { "southeast_asia": "Sudeste Asiático" },
+        { "southern_africa": "África Austral" },
+        { "south_africa": "África do Sul" },
+        { "south_america": "América do Sul" },
+        { "sub_saharan_africa": "África Subsaariana" },
+        { "united_kingdom": "Reino Unido" },
+        { "united_states": "Estados Unidos" },
+        { "west_africa": "Oeste da África" }
+      ]
+    }
+  },
+  {
+    "history": {
+      "name": "História",
+      "subcategories": [
+        { "conflict": "Conflito" },
+        { "historic_figures": "Figuras Históricas" },
+        { "historic_places": "Locais Históricos" },
+        { "historic_events": "Eventos Históricos" },
+        { "epochs": "Épocas" },
+        { "artifacts": "Artefatos" },
+        { "monuments": "Monumentos" },
+        { "prehistory": "Pré-história" },
+        { "ancient_civilizations": "Civilizações Antigas" },
+        { "renaissance": "Renascença" },
+        { "inventions": "Invenções" },
+        { "world_wars": "Guerras Mundiais" }
+      ]
+    }
+  },
+  {
+    "science": {
+      "name": "Ciência",
+      "subcategories": [
+        { "social_sciences": "Ciências Sociais" },
+        { "astronomy": "Astronomia" },
+        { "geography": "Geografia" },
+        { "physics": "Física" },
+        { "chemistry": "Química" },
+        { "biology": "Biologia" },
+        { "medicine": "Medicina" },
+        { "mathematics": "Matemática" }
+      ]
+    }
+  },
+  {
+    "Gaming": {
+      "name": "Jogos",
+      "subcategories": [
+        { "tabletop_gaming": "Jogos de Tabuleiro" },
+        { "video_gaming": "Jogos de Vídeo" },
+        { "mobile_gaming": "Jogos para Dispositivos Móveis" },
+        { "retro_gaming": "Jogos Retrô" },
+        { "minecraft": "Minecraft" },
+        { "survival": "Jogos de Sobrevivência" },
+        { "content": "Conteúdo" },
+        { "gaming_series": "Séries de Jogos" },
+        { "consoles": "Consoles" },
+        { "card_games": "Jogos de Cartas" },
+        { "pokemon": "Pokémon" }
+      ]
+    }
+  },
+  {
+    "sports": {
+      "name": "Esportes",
+      "subcategories": [
+        { "olympic_games": "Jogos Olímpicos" },
+        { "athletes": "Atletas" },
+        { "teams": "Equipes" },
+        { "venues": "Locais" },
+        { "championships": "Campeonatos" },
+        { "bar_sports": "Esportes de Bar" },
+        { "brain_sports": "Esportes Mentais" },
+        { "racing": "Corridas" }
+      ]
+    }
+  },
+  {
+    "literature": {
+      "name": "Literatura",
+      "subcategories": [
+        { "awards": "Prêmios" },
+        { "harry_potter": "Harry Potter" },
+        { "middle_earth": "Terra Média" },
+        { "manga": "Mangá" },
+        { "book_series": "Séries de Livros" },
+        { "authors": "Autores" },
+        { "books": "Livros" },
+        { "bibliography": "Bibliografia" },
+        { "comics": "Quadrinhos" },
+        { "characters": "Personagens" },
+        { "shakespeare": "Shakespeare" },
+        { "non_fiction": "Não Ficção" }
+      ]
+    }
+  },
+  {
+    "misc": {
+      "name": "Diversos",
+      "subcategories": [
+        { "memes": "Memes" },
+        { "funny": "Engraçado" },
+        { "telegram": "Telegram" },
+        { "things": "Coisas" },
+        { "meta": "Meta" },
+        { "names": "Nomes" },
+        { "fictional": "Fictício" },
+        { "colours": "Cores" }
+      ]
+    }
+  },
+  {
+    "society": {
+      "name": "Sociedade",
+      "subcategories": [
+        { "education": "Educação" },
+        { "business": "Negócios" },
+        { "automotive": "Automotivo" },
+        { "transportation": "Transporte" },
+        { "infrastructure": "Infraestrutura" },
+        { "cities": "Cidades" },
+        { "countries": "Países" },
+        { "capitals": "Capitais" },
+        { "politics": "Política" },
+        { "leaders": "Líderes" },
+        { "celebrities": "Celebridades" },
+        { "crime": "Crime" },
+        { "human_rights": "Direitos Humanos" },
+        { "social_movements": "Movimentos Sociais" }
+      ]
+    }
+  },
+  {
+    "language": {
+      "name": "Linguagem",
+      "subcategories": [
+        { "terms": "Termos" },
+        { "euphemisms": "Eufemismos" },
+        { "idioms": "Idiomas" },
+        { "words": "Palavras" },
+        { "foreign": "Estrangeiro" },
+        { "synonyms": "Sinônimos" },
+        { "loanwords": "Palavras emprestadas" },
+        { "grammar": "Gramática" }
+      ]
+    }
+  },
+  {
+    "nature": {
+      "name": "Natureza",
+      "subcategories": [
+        { "animals": "Animais" },
+        { "plants": "Plantas" },
+        { "disasters": "Desastres" },
+        { "weather": "Clima" },
+        { "biomes": "Biomas" }
+      ]
+    }
+  },
+  {
+    "technology": {
+      "name": "Tecnologia",
+      "subcategories": [
+        { "programming": "Programação" },
+        { "internet": "Internet" },
+        { "hardware": "Hardware" },
+        { "software": "Software" },
+        { "operating_systems": "Sistemas Operacionais" },
+        { "data_science": "Ciência de Dados" }
+      ]
+    }
+  }
+]

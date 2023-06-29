@@ -5,72 +5,84 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-Category.create([
-  { name: 'Adult' },
-  { name: 'Animation' },
-  { name: 'Anime/Manga' },
-  { name: 'Art' },
-  { name: 'Biology' },
-  { name: 'Business' },
-  { name: 'Celebrities' },
-  { name: 'Challenging' },
-  { name: 'Chemistry' },
-  { name: 'Culture' },
-  { name: 'Entertainment' },
-  { name: 'Food and Drink' },
-  { name: 'Funny' },
-  { name: 'Gaming' },
-  { name: 'Geography' },
-  { name: 'History' },
-  { name: 'Internet' },
-  { name: 'K-drama' },
-  { name: 'K-pop' },
-  { name: 'Language' },
-  { name: 'Literature' },
-  { name: 'Mathematics' },
-  { name: 'Medicine' },
-  { name: 'Misc' },
-  { name: 'Movies' },
-  { name: 'Music' },
-  { name: 'Nature' },
-  { name: 'Non-English' },
-  { name: 'Objects' },
-  { name: 'Politics' },
-  { name: 'Religion' },
-  { name: 'Science' },
-  { name: 'Society' },
-  { name: 'Sports' },
-  { name: 'Technology' },
-  { name: 'Telenovelas' },
-  { name: 'Television' },
-  { name: 'Transportation' },
-])
 
-languages = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'languages.json')))
+languages = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'all_languages.json')))
 
-approved_languages = languages.filter do |language|
-  [
-    'DE', 'EN', 'ES', 'FR', 'HI', 'ID', 'IT', 'JA',
-    'KO', 'LA', 'NL', 'PA', 'PT', 'RU', 'TA', 'TH',
-    'TL', 'TR', 'ZH'
-  ].include?(language['code'])
+[
+  'DE', 'EN', 'ES', 'FR', 'HI', 'ID', 'IT', 'JA',
+  'KO', 'NL', 'PA', 'PT', 'RU', 'TA', 'TL', 'TR', 'ZH'
+].map do |language|
+  Language.find_or_create_by(code: language)
 end
 
-Language.create(approved_languages.map do |language|
-  language.slice(*Language.column_names.map(&:to_sym))
-end)
+categories = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'all_categories.json')))
 
-approved_languages.each do |approved_language|
-  language = Language.find_by_code(approved_language['code'])
-  english = Language.find_by_code("EN")
-  Translation.create({
-    language:,
-    source: language,
-    translation: approved_language['native'],
-  })
-  Translation.create({
-    language: english,
-    source: language,
-    translation: approved_language['name'],
-  })
+categories.each do |parent_category|
+  parent_category.each do |parent_category_name, subcategories|
+    parent_category = Category.find_or_create_by(name: parent_category_name)
+    subcategories.map do |subcategory_name|
+      Category.find_or_create_by(
+        name: subcategory_name,
+        parent_category:,
+      )
+    end
+  end
+end
+
+commands = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'all_commands.json')))
+
+commands.each do |command|
+  Command.find_or_create_by(name: command)
+end
+
+Dir.chdir(Rails.root.join('db', 'seeds'))
+Dir.glob('*').select { |f| File.directory?(f) }.each do |folder|
+
+  selected_language = Language.find_by_code(folder)
+
+  languages = JSON.parse(File.read(Rails.root.join('db', 'seeds', folder, 'languages.json')))
+  languages.each do |translated_language|
+    translated_language.each do |code, translation|
+      language = Language.find_by_code(code)
+      Translation.find_or_create_by(
+        language: selected_language,
+        source: language,
+        translation:,
+      )
+    end
+  end
+
+  categories = JSON.parse(File.read(Rails.root.join('db', 'seeds', folder, 'categories.json')))
+  categories.each do |translated_category|
+    translated_category.each do |category_name, selected_category|
+      parent_category = Category.find_by_name(category_name)
+      Translation.find_or_create_by(
+        language: selected_language,
+        source: parent_category,
+        translation: selected_category['name'],
+      )
+      selected_category['subcategories'].each do |selected_subcategory|
+        selected_subcategory.each do |subcategory_name, subcategory_translation|
+          subcategory = Category.find_by(name: subcategory_name, parent_category:)
+          Translation.find_or_create_by(
+            language: selected_language,
+            source: subcategory,
+            translation: subcategory_translation,
+          )
+        end
+      end
+    end
+  end
+
+  commands = JSON.parse(File.read(Rails.root.join('db', 'seeds', folder, 'commands.json')))
+  commands.each do |translated_command|
+    translated_command.each do |name, translation|
+      command = Command.find_by_name(name)
+      Translation.find_or_create_by(
+        language: selected_language,
+        source: command,
+        translation:,
+      )
+    end
+  end
 end

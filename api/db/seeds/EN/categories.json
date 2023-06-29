@@ -1,0 +1,290 @@
+[
+  {
+    "music": {
+      "name": "Music",
+      "subcategories": [
+        { "artists": "Artists" },
+        { "instruments": "Instruments" },
+        { "songs": "Songs" },
+        { "albums": "Albums" },
+        { "discography": "Discography" },
+        { "bands": "Bands" },
+        { "k_pop": "K-pop" },
+        { "soundtracks": "Soundtracks" },
+        { "musicals": "Musicals" },
+        { "rap": "Rap" },
+        { "rock": "Rock" },
+        { "electronic": "Electronic" },
+        { "lyrics": "Lyrics" },
+        { "awards": "Awards" },
+        { "festivals": "Festivals" }
+      ]
+    }
+  },
+  {
+    "television": {
+      "name": "Television",
+      "subcategories": [
+        { "seasons": "Seasons" },
+        { "characters": "Characters" },
+        { "cast": "Cast" },
+        { "reality": "Reality" },
+        { "titles": "Titles" },
+        { "k_drama": "K-drama" },
+        { "animation": "Animation" },
+        { "anime": "Anime" },
+        { "details": "Details" },
+        { "streaming_services": "Streaming Services" }
+      ]
+    }
+  },
+  {
+    "movies": {
+      "name": "Movies",
+      "subcategories": [
+        { "awards": "Awards" },
+        { "cast": "Cast" },
+        { "actors": "Actors" },
+        { "characters": "Characters" },
+        { "filmography": "Filmography" },
+        { "titles": "Titles" },
+        { "marvel_dc": "Marvel/DC" },
+        { "star_wars": "Star Wars" },
+        { "animation": "Animation" },
+        { "anime": "Anime" },
+        { "details": "Details" }
+      ]
+    }
+  },
+  {
+    "culture": {
+      "name": "Culture",
+      "subcategories": [
+        { "entertainment": "Entertainment" },
+        { "tradition": "Tradition" },
+        { "celebrations": "Celebrations" },
+        { "religion": "Religion" },
+        { "astrology": "Astrology" },
+        { "mythology": "Mythology" },
+        { "fashion": "Fashion" },
+        { "adult": "Adult" },
+        { "visual_arts": "Visual Arts" },
+        { "performing_arts": "Performing Arts" },
+        { "food_drink": "Food and Drink" }
+      ]
+    }
+  },
+  {
+    "region": {
+      "name": "Region",
+      "subcategories": [
+        { "africa": "Africa" },
+        { "antarctica": "Antarctica" },
+        { "asia": "Asia" },
+        { "atlantic_ocean": "Atlantic Ocean" },
+        { "australia": "Australia" },
+        { "brazil": "Brazil" },
+        { "canada": "Canada" },
+        { "caribbean": "Caribbean" },
+        { "central_america": "Central America" },
+        { "central_asia": "Central Asia" },
+        { "china": "China" },
+        { "commonwealth": "Commonwealth" },
+        { "east_africa": "East Africa" },
+        { "egypt": "Egypt" },
+        { "europe": "Europe" },
+        { "european_union": "European Union" },
+        { "france": "France" },
+        { "germany": "Germany" },
+        { "greece": "Greece" },
+        { "india": "India" },
+        { "indian_ocean": "Indian Ocean" },
+        { "indonesia": "Indonesia" },
+        { "italy": "Italy" },
+        { "mediterranean": "Mediterranean" },
+        { "mexico": "Mexico" },
+        { "middle_east": "Middle East" },
+        { "north_africa": "North Africa" },
+        { "north_america": "North America" },
+        { "oceania": "Oceania" },
+        { "ottoman_empire": "Ottoman Empire" },
+        { "pacific_ocean": "Pacific Ocean" },
+        { "roman_empire": "Roman Empire" },
+        { "russia": "Russia" },
+        { "russian_empire": "Russian Empire" },
+        { "scandinavia": "Scandinavia" },
+        { "spain": "Spain" },
+        { "southeast_asia": "Southeast Asia" },
+        { "southern_africa": "Southern Africa" },
+        { "south_africa": "South Africa" },
+        { "south_america": "South America" },
+        { "sub_saharan_africa": "Sub-Saharan Africa" },
+        { "united_kingdom": "United Kingdom" },
+        { "united_states": "United States" },
+        { "west_africa": "West Africa" }
+      ]
+    }
+  },
+  {
+    "history": {
+      "name": "History",
+      "subcategories": [
+        { "conflict": "Conflict" },
+        { "historic_figures": "Historic Figures" },
+        { "historic_places": "Historic Places" },
+        { "historic_events": "Historic Events" },
+        { "epochs": "Epochs" },
+        { "artifacts": "Artifacts" },
+        { "monuments": "Monuments" },
+        { "prehistory": "Prehistory" },
+        { "ancient_civilizations": "Ancient Civilizations" },
+        { "renaissance": "Renaissance" },
+        { "inventions": "Inventions" },
+        { "world_wars": "World Wars" }
+      ]
+    }
+  },
+  {
+    "science": {
+      "name": "Science",
+      "subcategories": [
+        { "social_sciences": "Social Sciences" },
+        { "astronomy": "Astronomy" },
+        { "geography": "Geography" },
+        { "physics": "Physics" },
+        { "chemistry": "Chemistry" },
+        { "biology": "Biology" },
+        { "medicine": "Medicine" },
+        { "mathematics": "Mathematics" }
+      ]
+    }
+  },
+  {
+    "Gaming": {
+      "name": "gaming",
+      "subcategories": [
+        { "tabletop_gaming": "Tabletop Gaming" },
+        { "video_gaming": "Video Gaming" },
+        { "mobile_gaming": "Mobile Gaming" },
+        { "retro_gaming": "Retro Gaming" },
+        { "minecraft": "Minecraft" },
+        { "survival": "Survival" },
+        { "content": "Content" },
+        { "gaming_series": "Gaming Series" },
+        { "consoles": "Consoles" },
+        { "card_games": "Card Games" },
+        { "pokemon": "Pokémon" }
+      ]
+    }
+  },
+  {
+    "sports": {
+      "name": "Sports",
+      "subcategories": [
+        { "olympic_games": "Olympic Games" },
+        { "athletes": "Athletes" },
+        { "teams": "Teams" },
+        { "venues": "Venues" },
+        { "championships": "Championships" },
+        { "bar_sports": "Bar Sports" },
+        { "brain_sports": "Brain Sports" },
+        { "racing": "Racing" }
+      ]
+    }
+  },
+  {
+    "literature": {
+      "name": "Literature",
+      "subcategories": [
+        { "awards": "Awards" },
+        { "harry_potter": "Harry Potter" },
+        { "middle_earth": "Middle-Earth" },
+        { "manga": "Manga" },
+        { "book_series": "Book Series" },
+        { "authors": "Authors" },
+        { "books": "Books" },
+        { "bibliography": "Bibliography" },
+        { "comics": "Comics" },
+        { "characters": "Characters" },
+        { "shakespeare": "Shakespeare" },
+        { "non_fiction": "Non-Fiction" }
+      ]
+    }
+  },
+  {
+    "misc": {
+      "name": "Misc",
+      "subcategories": [
+        { "memes": "Memes" },
+        { "funny": "Funny" },
+        { "telegram": "Telegram" },
+        { "things": "Things" },
+        { "meta": "Meta" },
+        { "names": "Names" },
+        { "fictional": "Fictional" },
+        { "colours": "Colours" }
+      ]
+    }
+  },
+  {
+    "society": {
+      "name": "Society",
+      "subcategories": [
+        { "education": "Education" },
+        { "business": "Business" },
+        { "automotive": "Automotive" },
+        { "transportation": "Transportation" },
+        { "infrastructure": "Infrastructure" },
+        { "cities": "Cities" },
+        { "countries": "Countries" },
+        { "capitals": "Capitals" },
+        { "politics": "Politics" },
+        { "leaders": "Leaders" },
+        { "celebrities": "Celebrities" },
+        { "crime": "Crime" },
+        { "human_rights": "Human Rights" },
+        { "social_movements": "Social Movements" }
+      ]
+    }
+  },
+  {
+    "language": {
+      "name": "Language",
+      "subcategories": [
+        { "terms": "Terms" },
+        { "euphemisms": "Euphemisms" },
+        { "idioms": "Idioms" },
+        { "words": "Words" },
+        { "foreign": "Foreign" },
+        { "synonyms": "Synonyms" },
+        { "loanwords": "Loanwords" },
+        { "grammar": "Grammar" }
+      ]
+    }
+  },
+  {
+    "nature": {
+      "name": "Nature",
+      "subcategories": [
+        { "animals": "Animals" },
+        { "plants": "Plants" },
+        { "disasters": "Disasters" },
+        { "weather": "Weather" },
+        { "biomes": "Biomes" }
+      ]
+    }
+  },
+  {
+    "technology": {
+      "name": "Technology",
+      "subcategories": [
+        { "programming": "Programming" },
+        { "internet": "Internet" },
+        { "hardware": "Hardware" },
+        { "software": "Software" },
+        { "operating_systems": "Operating Systems" },
+        { "data_science": "Data Science" }
+      ]
+    }
+  }
+]

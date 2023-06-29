@@ -1,0 +1,11 @@
+commands = ["rate",
+            "stats",
+            "stat",
+            "setting",
+            "language",
+            "pick",
+            "suggest",
+            "values",
+            "desc",
+            "difficulty",
+            "frequency"]

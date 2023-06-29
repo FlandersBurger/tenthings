@@ -10,14 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_14_043206) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_29_183948) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.bigint "parent_category_id"
     t.index ["parent_category_id"], name: "index_categories_on_parent_category_id"
+  end
+
+  create_table "commands", force: :cascade do |t|
+    t.string "name"
   end
 
   create_table "game_categories", force: :cascade do |t|
@@ -38,6 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_14_043206) do
     t.bigint "game_id"
     t.bigint "list_value_id"
     t.bigint "guesser_id"
+    t.boolean "picked"
     t.index ["game_id"], name: "index_game_list_values_on_game_id"
     t.index ["guesser_id"], name: "index_game_list_values_on_guesser_id"
     t.index ["list_value_id"], name: "index_game_list_values_on_list_value_id"
@@ -46,16 +53,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_14_043206) do
   create_table "games", force: :cascade do |t|
     t.integer "platform"
     t.string "platform_id"
+    t.bigint "list_id"
     t.boolean "enabled", default: true, null: false
-    t.integer "hints"
-    t.integer "cycles"
+    t.integer "hints", default: 0
+    t.integer "cycles", default: 0
     t.datetime "last_cycled_at"
     t.datetime "last_played_at"
     t.integer "lists_played"
-    t.boolean "introduces"
-    t.boolean "sasses"
-    t.boolean "snubs"
-    t.boolean "updates"
+    t.boolean "introduces", default: true
+    t.boolean "sasses", default: true
+    t.boolean "snubs", default: true
+    t.boolean "updates", default: true
+    t.index ["list_id"], name: "index_games_on_list_id"
   end
 
   create_table "languages", force: :cascade do |t|
@@ -86,14 +95,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_14_043206) do
     t.bigint "language_id"
     t.string "name"
     t.string "search"
-    t.integer "frequency"
-    t.integer "difficulty"
+    t.integer "frequency", default: 0
+    t.integer "difficulty", default: 0
     t.boolean "evolvable", default: true, null: false
     t.boolean "immutable", default: false, null: false
     t.boolean "enabled", default: true, null: false
-    t.integer "plays"
-    t.integer "skips"
-    t.integer "hints"
+    t.integer "plays", default: 0
+    t.integer "skips", default: 0
+    t.integer "hints", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["created_by_id"], name: "index_lists_on_created_by_id"
@@ -103,29 +112,29 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_14_043206) do
   create_table "players", force: :cascade do |t|
     t.bigint "game_id"
     t.bigint "user_id"
-    t.integer "score"
-    t.integer "daily_score"
-    t.integer "high_score"
-    t.integer "plays"
-    t.integer "wins"
-    t.integer "answers"
-    t.integer "lists"
-    t.integer "hints"
-    t.integer "snubs"
-    t.integer "skips"
-    t.integer "vetoes"
-    t.integer "suggestions"
-    t.integer "searches"
-    t.integer "current_play_streak"
-    t.integer "current_game_streak"
-    t.integer "current_hint_streak"
-    t.integer "max_play_streak"
-    t.integer "max_game_streak"
-    t.integer "max_hint_streak"
+    t.integer "score", default: 0
+    t.integer "daily_score", default: 0
+    t.integer "high_score", default: 0
+    t.integer "plays", default: 0
+    t.integer "wins", default: 0
+    t.integer "answers", default: 0
+    t.integer "lists", default: 0
+    t.integer "hints", default: 0
+    t.integer "snubs", default: 0
+    t.integer "skips", default: 0
+    t.integer "vetoes", default: 0
+    t.integer "suggestions", default: 0
+    t.integer "searches", default: 0
+    t.integer "current_play_streak", default: 0
+    t.integer "current_game_streak", default: 0
+    t.integer "current_hint_streak", default: 0
+    t.integer "max_play_streak", default: 0
+    t.integer "max_game_streak", default: 0
+    t.integer "max_hint_streak", default: 0
     t.datetime "last_played_at"
-    t.boolean "present"
-    t.integer "minigame_plays"
-    t.integer "tinygame_plays"
+    t.boolean "present", default: true
+    t.integer "minigame_plays", default: 0
+    t.integer "tinygame_plays", default: 0
     t.index ["game_id"], name: "index_players_on_game_id"
     t.index ["user_id"], name: "index_players_on_user_id"
   end

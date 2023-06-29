@@ -1,0 +1,267 @@
+[
+  {
+    "music": {
+      "name": "Musik",
+      "subcategories": [
+        { "artists": "Artis" },
+        { "instruments": "Alat Musik" },
+        { "songs": "Lagu" },
+        { "albums": "Album" },
+        { "discography": "Diskografi" },
+        { "bands": "Grup Band" },
+        { "k_pop": "K-pop" },
+        { "soundtracks": "Lagu Pengiring" },
+        { "musicals": "Musikal" },
+        { "rap": "Rap" },
+        { "rock": "Rock" },
+        { "electronic": "Elektronik" },
+        { "lyrics": "Lirik" },
+        { "awards": "Penghargaan" },
+        { "festivals": "Festival" }
+      ]
+    },
+    "television": {
+      "name": "Televisi",
+      "subcategories": [
+        { "seasons": "Musim" },
+        { "characters": "Karakter" },
+        { "cast": "Pemeran" },
+        { "reality": "Reality" },
+        { "titles": "Judul" },
+        { "k_drama": "K-drama" },
+        { "animation": "Animasi" },
+        { "anime": "Anime" },
+        { "details": "Detail" },
+        { "streaming_services": "Layanan Streaming" }
+      ]
+    },
+    "movies": {
+      "name": "Film",
+      "subcategories": [
+        { "awards": "Penghargaan" },
+        { "cast": "Pemeran" },
+        { "actors": "Aktor" },
+        { "characters": "Karakter" },
+        { "filmography": "Filmografi" },
+        { "titles": "Judul" },
+        { "marvel_dc": "Marvel/DC" },
+        { "star_wars": "Star Wars" },
+        { "animation": "Animasi" },
+        { "anime": "Anime" },
+        { "details": "Detail" }
+      ]
+    }
+  },
+  {
+    "culture": {
+      "name": "Budaya",
+      "subcategories": [
+        { "entertainment": "Hiburan" },
+        { "tradition": "Tradisi" },
+        { "celebrations": "Perayaan" },
+        { "religion": "Agama" },
+        { "astrology": "Astrologi" },
+        { "mythology": "Mitologi" },
+        { "fashion": "Mode" },
+        { "adult": "Dewasa" },
+        { "visual_arts": "Seni Visual" },
+        { "performing_arts": "Seni Pertunjukan" },
+        { "food_drink": "Makanan dan Minuman" }
+      ]
+    },
+    "region": {
+      "name": "Wilayah",
+      "subcategories": [
+        { "africa": "Afrika" },
+        { "antarctica": "Antarktika" },
+        { "asia": "Asia" },
+        { "atlantic_ocean": "Samudra Atlantik" },
+        { "australia": "Australia" },
+        { "brazil": "Brasil" },
+        { "canada": "Kanada" },
+        { "caribbean": "Karibia" },
+        { "central_america": "Amerika Tengah" },
+        { "central_asia": "Asia Tengah" },
+        { "china": "Cina" },
+        { "commonwealth": "Persemakmuran" },
+        { "east_africa": "Afrika Timur" },
+        { "egypt": "Mesir" },
+        { "europe": "Eropa" },
+        { "european_union": "Uni Eropa" },
+        { "france": "Prancis" },
+        { "germany": "Jerman" },
+        { "greece": "Yunani" },
+        { "india": "India" },
+        { "indian_ocean": "Samudra Hindia" },
+        { "indonesia": "Indonesia" },
+        { "italy": "Italia" },
+        { "mediterranean": "Laut Tengah" },
+        { "mexico": "Meksiko" },
+        { "middle_east": "Timur Tengah" },
+        { "north_africa": "Afrika Utara" },
+        { "north_america": "Amerika Utara" },
+        { "oceania": "Oseania" },
+        { "ottoman_empire": "Kekaisaran Ottoman" },
+        { "pacific_ocean": "Samudra Pasifik" },
+        { "roman_empire": "Kekaisaran Romawi" },
+        { "russia": "Rusia" },
+        { "russian_empire": "Kekaisaran Rusia" },
+        { "scandinavia": "Skandinavia" },
+        { "spain": "Spanyol" },
+        { "southeast_asia": "Asia Tenggara" },
+        { "southern_africa": "Afrika Selatan" },
+        { "south_africa": "Afrika Selatan" },
+        { "south_america": "Amerika Selatan" },
+        { "sub_saharan_africa": "Afrika Sub-Sahara" },
+        { "united_kingdom": "Britania Raya" },
+        { "united_states": "Amerika Serikat" },
+        { "western_europe": "Eropa Barat" },
+        { "world": "Dunia" }
+      ]
+    },
+    "history": {
+      "name": "Sejarah",
+      "subcategories": [
+        { "conflict": "Konflik" },
+        { "historic_figures": "Tokoh Bersejarah" },
+        { "historic_places": "Tempat Bersejarah" },
+        { "historic_events": "Peristiwa Bersejarah" },
+        { "epochs": "Zaman" },
+        { "artifacts": "Artifak" },
+        { "monuments": "Monumen" },
+        { "prehistory": "Prasejarah" },
+        { "ancient_civilizations": "Peradaban Kuno" },
+        { "renaissance": "Renaisans" },
+        { "inventions": "Inovasi" },
+        { "world_wars": "Perang Dunia" }
+      ]
+    }
+  },
+  {
+    "science": {
+      "name": "Sains",
+      "subcategories": [
+        { "social_sciences": "Ilmu Sosial" },
+        { "astronomy": "Astronomi" },
+        { "geography": "Geografi" },
+        { "physics": "Fisika" },
+        { "chemistry": "Kimia" },
+        { "biology": "Biologi" },
+        { "medicine": "Kedokteran" },
+        { "mathematics": "Matematika" }
+      ]
+    },
+    "gaming": {
+      "name": "Permainan",
+      "subcategories": [
+        { "tabletop_gaming": "Permainan Meja" },
+        { "video_gaming": "Permainan Video" },
+        { "mobile_gaming": "Permainan Mobile" },
+        { "retro_gaming": "Permainan Retro" },
+        { "minecraft": "Minecraft" },
+        { "survival": "Survival" },
+        { "content": "Konten" },
+        { "gaming_series": "Serial Permainan" },
+        { "consoles": "Konsol" },
+        { "card_games": "Permainan Kartu" },
+        { "pokemon": "Pokémon" }
+      ]
+    },
+    "sports": {
+      "name": "Olahraga",
+      "subcategories": [
+        { "olympic_games": "Olimpiade" },
+        { "athletes": "Atlet" },
+        { "teams": "Tim" },
+        { "venues": "Tempat Pertandingan" },
+        { "championships": "Kejuaraan" },
+        { "bar_sports": "Olahraga Bar" },
+        { "brain_sports": "Olahraga Otak" },
+        { "racing": "Balap" }
+      ]
+    },
+    "literature": {
+      "name": "Sastra",
+      "subcategories": [
+        { "awards": "Penghargaan" },
+        { "harry_potter": "Harry Potter" },
+        { "middle_earth": "Dunia Tengah" },
+        { "manga": "Manga" },
+        { "book_series": "Seri Buku" },
+        { "authors": "Penulis" },
+        { "books": "Buku" },
+        { "bibliography": "Bibliografi" },
+        { "comics": "Komik" },
+        { "characters": "Karakter" },
+        { "shakespeare": "Shakespeare" },
+        { "non_fiction": "Non-Fiksi" }
+      ]
+    },
+    "misc": {
+      "name": "Lainnya",
+      "subcategories": [
+        { "memes": "Meme" },
+        { "funny": "Lucu" },
+        { "telegram": "Telegram" },
+        { "things": "Hal-hal" },
+        { "meta": "Meta" },
+        { "names": "Nama" },
+        { "fictional": "Fiksi" },
+        { "colours": "Warna" }
+      ]
+    },
+    "society": {
+      "name": "Masyarakat",
+      "subcategories": [
+        { "education": "Pendidikan" },
+        { "business": "Bisnis" },
+        { "automotive": "Otomotif" },
+        { "transportation": "Transportasi" },
+        { "infrastructure": "Infrastruktur" },
+        { "cities": "Kota" },
+        { "countries": "Negara" },
+        { "capitals": "Ibu Kota" },
+        { "politics": "Politik" },
+        { "leaders": "Pemimpin" },
+        { "celebrities": "Selebriti" },
+        { "crime": "Kriminalitas" },
+        { "human_rights": "Hak Asasi Manusia" },
+        { "social_movements": "Gerakan Sosial" }
+      ]
+    },
+    "language": {
+      "name": "Bahasa",
+      "subcategories": [
+        { "terms": "Istilah" },
+        { "euphemisms": "Eufemisme" },
+        { "idioms": "Idiom" },
+        { "words": "Kata-kata" },
+        { "foreign": "Asing" },
+        { "synonyms": "Sinonim" },
+        { "loanwords": "Kata Serapan" },
+        { "grammar": "Tata Bahasa" }
+      ]
+    },
+    "nature": {
+      "name": "Alam",
+      "subcategories": [
+        { "animals": "Hewan" },
+        { "plants": "Tumbuhan" },
+        { "disasters": "Bencana" },
+        { "weather": "Cuaca" },
+        { "biomes": "Bioma" }
+      ]
+    },
+    "technology": {
+      "name": "Teknologi",
+      "subcategories": [
+        { "programming": "Pemrograman" },
+        { "internet": "Internet" },
+        { "hardware": "Perangkat Keras" },
+        { "software": "Perangkat Lunak" },
+        { "operating_systems": "Sistem Operasi" },
+        { "data_science": "Ilmu Data" }
+      ]
+    }
+  }
+]

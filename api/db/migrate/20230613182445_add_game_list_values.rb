@@ -3,7 +3,7 @@ class AddGameListValues < ActiveRecord::Migration[7.0]
     create_table :game_list_values do |t|
       t.references :game
       t.references :list_value
-      t.references :guesser, foreign_key: { to_table: :players }, null: true, default: null
+      t.references :guesser, foreign_key: { to_table: :players }, null: true
       t.boolean :picked
     end
   end
