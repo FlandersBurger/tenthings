@@ -1,5 +1,8 @@
 [
   {
+    "BN": "Bengali"
+  },
+  {
     "DE": "Alemão"
   },
   {
@@ -24,6 +27,9 @@
     "KO": "Coreano"
   },
   {
+    "MR": "Marathi"
+  },
+  {
     "NL": "Holandês; Flamengo"
   },
   {
@@ -39,10 +45,22 @@
     "ES": "Espanhol; Castelhano"
   },
   {
+    "TA": "Tâmil"
+  },
+  {
+    "TE": "Telugu"
+  },
+  {
+    "TH": "Tailandês"
+  },
+  {
     "TL": "Tagalo"
   },
   {
     "TR": "Turco"
+  },
+  {
+    "UR": "Urdu"
   },
   {
     "ZH": "Chinês"

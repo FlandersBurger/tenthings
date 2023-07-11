@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_06_215059) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_11_194633) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,6 +33,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_06_215059) do
     t.index ["game_id"], name: "index_game_categories_on_game_id"
   end
 
+  create_table "game_cycles", force: :cascade do |t|
+    t.bigint "game_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_game_cycles_on_game_id"
+  end
+
   create_table "game_languages", force: :cascade do |t|
     t.bigint "game_id"
     t.bigint "language_id"
@@ -50,21 +57,41 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_06_215059) do
     t.index ["list_value_id"], name: "index_game_list_values_on_list_value_id"
   end
 
+  create_table "game_picked_lists", force: :cascade do |t|
+    t.bigint "list_id", null: false
+    t.bigint "game_id", null: false
+    t.bigint "picker_id"
+    t.index ["game_id"], name: "index_game_picked_lists_on_game_id"
+    t.index ["list_id"], name: "index_game_picked_lists_on_list_id"
+    t.index ["picker_id"], name: "index_game_picked_lists_on_picker_id"
+  end
+
+  create_table "game_played_lists", force: :cascade do |t|
+    t.bigint "list_id", null: false
+    t.bigint "game_id", null: false
+    t.index ["game_id"], name: "index_game_played_lists_on_game_id"
+    t.index ["list_id"], name: "index_game_played_lists_on_list_id"
+  end
+
   create_table "games", force: :cascade do |t|
     t.integer "platform"
     t.string "platform_id"
     t.bigint "list_id"
     t.boolean "enabled", default: true, null: false
     t.integer "hints", default: 0
-    t.integer "cycles", default: 0
-    t.datetime "last_cycled_at"
     t.datetime "last_played_at"
     t.integer "lists_played"
     t.boolean "introduces", default: true
     t.boolean "sasses", default: true
     t.boolean "snubs", default: true
     t.boolean "updates", default: true
+    t.bigint "streaker_id"
+    t.integer "streak", default: 0
+    t.bigint "language_id"
+    t.string "legacy_id"
+    t.index ["language_id"], name: "index_games_on_language_id"
     t.index ["list_id"], name: "index_games_on_list_id"
+    t.index ["streaker_id"], name: "index_games_on_streaker_id"
   end
 
   create_table "languages", force: :cascade do |t|
@@ -178,7 +205,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_06_215059) do
     t.index ["voter_id"], name: "index_votes_on_voter_id"
   end
 
+  add_foreign_key "game_cycles", "games"
   add_foreign_key "game_list_values", "players", column: "guesser_id"
+  add_foreign_key "game_picked_lists", "games"
+  add_foreign_key "game_picked_lists", "lists"
+  add_foreign_key "game_picked_lists", "users", column: "picker_id"
+  add_foreign_key "game_played_lists", "games"
+  add_foreign_key "game_played_lists", "lists"
+  add_foreign_key "games", "players", column: "streaker_id"
   add_foreign_key "list_values", "users", column: "created_by_id"
   add_foreign_key "lists", "users", column: "created_by_id"
   add_foreign_key "votes", "users", column: "voter_id"

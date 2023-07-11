@@ -1,5 +1,8 @@
 [
   {
+    "BN": "Bengali"
+  },
+  {
     "DE": "Jerman"
   },
   {
@@ -24,6 +27,9 @@
     "KO": "Korea"
   },
   {
+    "MR": "Marathi"
+  },
+  {
     "NL": "Belanda; Flandria"
   },
   {
@@ -39,10 +45,22 @@
     "ES": "Spanyol; Kastilia"
   },
   {
+    "TA": "Tamil"
+  },
+  {
+    "TE": "Telugu"
+  },
+  {
+    "TH": "Thai"
+  },
+  {
     "TL": "Tagalog"
   },
   {
     "TR": "Turki"
+  },
+  {
+    "UR": "Urdu"
   },
   {
     "ZH": "Cina"

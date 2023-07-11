@@ -9,8 +9,8 @@
 languages = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'all_languages.json')))
 
 [
-  'DE', 'EN', 'ES', 'FR', 'HI', 'ID', 'IT', 'JA',
-  'KO', 'NL', 'PA', 'PT', 'RU', 'TA', 'TL', 'TR', 'ZH'
+  'DE', 'EN', 'ES', 'FR', 'HI', 'ID', 'IT', 'JA', 'KO',
+  'NL', 'PA', 'PT', 'RU', 'TA', 'TH', 'TL', 'TR', 'ZH'
 ].map do |language|
   Language.find_or_create_by(code: language)
 end
@@ -37,7 +37,6 @@ end
 
 Dir.chdir(Rails.root.join('db', 'seeds'))
 Dir.glob('*').select { |f| File.directory?(f) }.each do |folder|
-
   selected_language = Language.find_by_code(folder)
 
   languages = JSON.parse(File.read(Rails.root.join('db', 'seeds', folder, 'languages.json')))
