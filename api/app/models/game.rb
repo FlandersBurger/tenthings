@@ -1,4 +1,5 @@
 class Game < ApplicationRecord
+  enum :platform, [:website, :telegram]
   has_many :players
   has_many :list_values, through: :game_list_values, as: :values
   has_one :list

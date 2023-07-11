@@ -32,7 +32,8 @@
         { "animation": "Animasi" },
         { "anime": "Anime" },
         { "details": "Detail" },
-        { "streaming_services": "Layanan Streaming" }
+        { "streaming_services": "Layanan Streaming" },
+        { "telenovela": "telenovela" }
       ]
     },
     "movies": {

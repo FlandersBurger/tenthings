@@ -29,7 +29,8 @@
       "animation",
       "anime",
       "details",
-      "streaming_services"
+      "streaming_services",
+      "telenovela"
     ]
   },
   {
@@ -139,7 +140,7 @@
     ]
   },
   {
-    "Gaming": [
+    "gaming": [
       "tabletop_gaming",
       "rpg",
       "rts",

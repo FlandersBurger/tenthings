@@ -34,7 +34,8 @@
         { "animation": "Animação" },
         { "anime": "Anime" },
         { "details": "Detalhes" },
-        { "streaming_services": "Serviços de streaming" }
+        { "streaming_services": "Serviços de streaming" },
+        { "telenovela": "telenovela" }
       ]
     }
   },
@@ -160,7 +161,7 @@
     }
   },
   {
-    "Gaming": {
+    "gaming": {
       "name": "Jogos",
       "subcategories": [
         { "tabletop_gaming": "Jogos de Tabuleiro" },

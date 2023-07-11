@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_29_183948) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_06_215059) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -81,8 +81,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_29_183948) do
   create_table "list_values", force: :cascade do |t|
     t.bigint "list_id"
     t.bigint "created_by_id"
-    t.string "value"
-    t.string "blurb"
+    t.string "value", null: false
+    t.text "blurb"
+    t.integer "blurb_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["created_by_id"], name: "index_list_values_on_created_by_id"
@@ -93,11 +94,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_29_183948) do
     t.string "legacy_id"
     t.bigint "created_by_id"
     t.bigint "language_id"
-    t.string "name"
+    t.string "name", null: false
     t.string "search"
+    t.text "description"
     t.integer "frequency", default: 0
     t.integer "difficulty", default: 0
-    t.boolean "evolvable", default: true, null: false
     t.boolean "immutable", default: false, null: false
     t.boolean "enabled", default: true, null: false
     t.integer "plays", default: 0
@@ -152,16 +153,33 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_29_183948) do
     t.integer "provider"
     t.string "legacy_id"
     t.string "uid"
-    t.string "first_name"
-    t.string "last_name"
+    t.string "name"
     t.string "username"
+    t.string "telegram_name"
     t.string "telegram_username"
+    t.decimal "telegram_id", precision: 64
     t.string "email"
+    t.boolean "email_verified"
+    t.boolean "admin"
+    t.boolean "banned"
+    t.string "photo_url"
+    t.datetime "birth_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.bigint "voter_id"
+    t.bigint "list_id"
+    t.integer "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["list_id"], name: "index_votes_on_list_id"
+    t.index ["voter_id"], name: "index_votes_on_voter_id"
   end
 
   add_foreign_key "game_list_values", "players", column: "guesser_id"
   add_foreign_key "list_values", "users", column: "created_by_id"
   add_foreign_key "lists", "users", column: "created_by_id"
+  add_foreign_key "votes", "users", column: "voter_id"
 end
