@@ -1,6 +1,7 @@
 module Legacy
   module CategoryHelper
     def transpose_category(old_category)
+      return nil unless category_dictionary.key?(old_category.to_sym)
       Category.find_by_name(category_dictionary.fetch(old_category.to_sym))
     end
 

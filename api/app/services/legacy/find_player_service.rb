@@ -7,8 +7,13 @@ module Legacy
 
     def perform
       user = Legacy::FindTelegramUserService.new(@legacy_player_params[:id], @legacy_player_params).perform
+      byebug unless user.errors.empty?
       player = user.players.find_by_game_id(@game.id)
-      player = Player.create(@legacy_player_params.permit(Player.new.permitted_attributes(:create)).merge(game: @game, user:)) if player.nil?
+      player = Player.create(
+        @legacy_player_params.permit(Player.new.permitted_attributes(:create)).merge(game: @game, user:)
+      ) if player.nil?
+      byebug unless player.errors.empty?
+
       player
     end
   end

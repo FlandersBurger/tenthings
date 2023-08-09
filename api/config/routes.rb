@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     get 'lists', action: :index, controller: 'lists'
     get 'users', action: :index, controller: 'users'
   end
+  
+  resources :lists, only: %i[index]
 end

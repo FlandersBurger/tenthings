@@ -2,8 +2,8 @@ class CreateLists < ActiveRecord::Migration[7.0]
   def change
     create_table :lists do |t|
       t.string :legacy_id
-      t.references :created_by, foreign_key: { to_table: :users }
-      t.references :language
+      t.references :created_by, foreign_key: { to_table: :users }, null: false
+      t.references :language, null: false
       t.string :name, null: false
       t.string :search
       t.text :description

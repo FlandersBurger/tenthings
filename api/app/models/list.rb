@@ -1,6 +1,8 @@
 class List < ApplicationRecord
+  include Paginatable
+
   validates :name, uniqueness: true
-  
+
   belongs_to :language
   belongs_to :created_by, class_name: "User"
 

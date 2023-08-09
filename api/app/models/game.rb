@@ -1,5 +1,6 @@
 class Game < ApplicationRecord
-  before_create :set_default_values
+  after_initialize :set_default_values
+  after_update :seed_associations
 
   validates :platform_id, uniqueness: true
 
@@ -17,14 +18,19 @@ class Game < ApplicationRecord
   has_many :categories, through: :game_categories
 
   belongs_to :streaker, class_name: "Player", optional: true
+  belongs_to :list, optional: true
   belongs_to :language
 
   private
 
   def set_default_values
     english = Language.find_by_code('EN')
-    assign_attributes(language_id: english.id)
-    languages << english
-    categories << Category.all
+    assign_attributes(language_id: english.id) if language.nil?
+  end
+
+  def seed_associations
+    # english = Language.find_by_code('EN')
+    # languages << english if languages.empty?
+    # categories << Category.all if categories.empty?
   end
 end

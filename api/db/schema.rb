@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_11_194633) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_13_170352) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "parent_category_id"
@@ -23,12 +23,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_11_194633) do
   end
 
   create_table "commands", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
   end
 
   create_table "game_categories", force: :cascade do |t|
-    t.bigint "game_id"
-    t.bigint "category_id"
+    t.bigint "game_id", null: false
+    t.bigint "category_id", null: false
     t.index ["category_id"], name: "index_game_categories_on_category_id"
     t.index ["game_id"], name: "index_game_categories_on_game_id"
   end
@@ -41,15 +41,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_11_194633) do
   end
 
   create_table "game_languages", force: :cascade do |t|
-    t.bigint "game_id"
-    t.bigint "language_id"
+    t.bigint "game_id", null: false
+    t.bigint "language_id", null: false
     t.index ["game_id"], name: "index_game_languages_on_game_id"
     t.index ["language_id"], name: "index_game_languages_on_language_id"
   end
 
   create_table "game_list_values", force: :cascade do |t|
-    t.bigint "game_id"
-    t.bigint "list_value_id"
+    t.bigint "game_id", null: false
+    t.bigint "list_value_id", null: false
     t.bigint "guesser_id"
     t.boolean "picked"
     t.index ["game_id"], name: "index_game_list_values_on_game_id"
@@ -60,9 +60,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_11_194633) do
   create_table "game_picked_lists", force: :cascade do |t|
     t.bigint "list_id", null: false
     t.bigint "game_id", null: false
-    t.bigint "picker_id"
+    t.bigint "picked_lists_id", null: false
+    t.bigint "picker_id", null: false
     t.index ["game_id"], name: "index_game_picked_lists_on_game_id"
     t.index ["list_id"], name: "index_game_picked_lists_on_list_id"
+    t.index ["picked_lists_id"], name: "index_game_picked_lists_on_picked_lists_id"
     t.index ["picker_id"], name: "index_game_picked_lists_on_picker_id"
   end
 
@@ -75,7 +77,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_11_194633) do
 
   create_table "games", force: :cascade do |t|
     t.integer "platform"
-    t.string "platform_id"
+    t.string "platform_id", null: false
+    t.string "legacy_id"
+    t.bigint "language_id", null: false
     t.bigint "list_id"
     t.boolean "enabled", default: true, null: false
     t.integer "hints", default: 0
@@ -87,27 +91,25 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_11_194633) do
     t.boolean "updates", default: true
     t.bigint "streaker_id"
     t.integer "streak", default: 0
-    t.bigint "language_id"
-    t.string "legacy_id"
     t.index ["language_id"], name: "index_games_on_language_id"
     t.index ["list_id"], name: "index_games_on_list_id"
     t.index ["streaker_id"], name: "index_games_on_streaker_id"
   end
 
   create_table "languages", force: :cascade do |t|
-    t.string "code"
+    t.string "code", null: false
   end
 
   create_table "list_categories", force: :cascade do |t|
-    t.bigint "list_id"
-    t.bigint "category_id"
+    t.bigint "list_id", null: false
+    t.bigint "category_id", null: false
     t.index ["category_id"], name: "index_list_categories_on_category_id"
     t.index ["list_id"], name: "index_list_categories_on_list_id"
   end
 
   create_table "list_values", force: :cascade do |t|
-    t.bigint "list_id"
-    t.bigint "created_by_id"
+    t.bigint "list_id", null: false
+    t.bigint "created_by_id", null: false
     t.string "value", null: false
     t.text "blurb"
     t.integer "blurb_type"
@@ -115,12 +117,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_11_194633) do
     t.datetime "updated_at", null: false
     t.index ["created_by_id"], name: "index_list_values_on_created_by_id"
     t.index ["list_id"], name: "index_list_values_on_list_id"
+    t.index ["value", "list_id"], name: "index_list_values_on_value_and_list_id"
   end
 
   create_table "lists", force: :cascade do |t|
     t.string "legacy_id"
-    t.bigint "created_by_id"
-    t.bigint "language_id"
+    t.bigint "created_by_id", null: false
+    t.bigint "language_id", null: false
     t.string "name", null: false
     t.string "search"
     t.text "description"
@@ -138,8 +141,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_11_194633) do
   end
 
   create_table "players", force: :cascade do |t|
-    t.bigint "game_id"
-    t.bigint "user_id"
+    t.bigint "game_id", null: false
+    t.bigint "user_id", null: false
     t.integer "score", default: 0
     t.integer "daily_score", default: 0
     t.integer "high_score", default: 0
@@ -168,9 +171,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_11_194633) do
   end
 
   create_table "translations", force: :cascade do |t|
-    t.bigint "language_id"
-    t.string "source_type"
-    t.bigint "source_id"
+    t.bigint "language_id", null: false
+    t.string "source_type", null: false
+    t.bigint "source_id", null: false
     t.string "translation"
     t.index ["language_id"], name: "index_translations_on_language_id"
     t.index ["source_type", "source_id"], name: "index_translations_on_source"
@@ -196,8 +199,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_11_194633) do
   end
 
   create_table "votes", force: :cascade do |t|
-    t.bigint "voter_id"
-    t.bigint "list_id"
+    t.bigint "voter_id", null: false
+    t.bigint "list_id", null: false
     t.integer "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -209,6 +212,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_11_194633) do
   add_foreign_key "game_list_values", "players", column: "guesser_id"
   add_foreign_key "game_picked_lists", "games"
   add_foreign_key "game_picked_lists", "lists"
+  add_foreign_key "game_picked_lists", "users", column: "picked_lists_id"
   add_foreign_key "game_picked_lists", "users", column: "picker_id"
   add_foreign_key "game_played_lists", "games"
   add_foreign_key "game_played_lists", "lists"

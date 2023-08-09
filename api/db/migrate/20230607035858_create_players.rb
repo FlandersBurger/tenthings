@@ -1,8 +1,8 @@
 class CreatePlayers < ActiveRecord::Migration[7.0]
   def change
     create_table :players do |t|
-      t.references :game
-      t.references :user, null: true
+      t.references :game, null: false
+      t.references :user, null: true, null: false
       t.integer :score, default: 0
       t.integer :daily_score, default: 0
       t.integer :high_score, default: 0
