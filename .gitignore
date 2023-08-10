@@ -34,7 +34,8 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /vendor/*
-/node_modules
+**/node_modules
+**/.yarn
 .env
 .vscode
 pgpass
