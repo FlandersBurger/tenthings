@@ -4,25 +4,25 @@ services:
     environment:
       POSTGRES_USER: tenthings
       POSTGRES_PASSWORD: test_db_password
-    ports: 
+    ports:
       - '5432:5432'
     volumes:
       - tenthings-postgres:/var/lib/postgresql/data
-      
+
   pgadmin:
     image: dpage/pgadmin4
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: root
-      PGADMIN_CONFIG_NODE_BLACKLIST: "[\"Catalogs\", \"Casts\"]"
+      PGADMIN_CONFIG_NODE_BLACKLIST: '["Catalogs", "Casts"]'
     ports:
-      - "5050:80"
+      - '5050:80'
     links:
       - postgres
     volumes:
       - ~/data/pgadmin_data:/var/lib/pgadmin
-      - ./servers.json:/pgadmin4/servers.json  
+      - ./servers.json:/pgadmin4/servers.json
       - ./pgpass:/pagadmin4/pgpass
     entrypoint: >
       /bin/sh -c "
@@ -31,7 +31,7 @@ services:
       cp -prv /pgadmin4/pgpass /var/lib/pgadmin/storage/admin_admin.com/;
       chmod 600 /var/lib/pgadmin/storage/admin_admin.com/pgpass;
       /entrypoint.sh
-      " 
+      "
 
   redis:
     image: redis:7.0
@@ -43,7 +43,7 @@ services:
   sidekiq:
     build:
       context: .
-    command: bundle exec sidekiq 
+    command: bundle exec sidekiq
     links:
       - postgres
       - redis
@@ -71,6 +71,13 @@ services:
       - '8010:8010'
     env_file:
       - .env
+
+  web:
+    build:
+      context: web
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
 
 volumes:
   tenthings-postgres:

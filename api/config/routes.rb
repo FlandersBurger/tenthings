@@ -8,5 +8,7 @@ Rails.application.routes.draw do
     get 'users', action: :index, controller: 'users'
   end
   
-  resources :lists, only: %i[index]
+  resources :lists, only: %i[index] do
+    get 'random', on: :collection
+  end
 end

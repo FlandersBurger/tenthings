@@ -23,6 +23,11 @@ class ApiController < ActionController::API
       },
     })
   end
+  
+  # GET /:id
+  def show(item, serializer)
+    render_with_view(serializer, item, index_params[:view])
+  end
 
   private
 
