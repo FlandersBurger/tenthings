@@ -19,4 +19,6 @@ RUN bundle install
 RUN yarn install
 ENV RUBYOPT="--enable-frozen-string-literal"
 
+RUN mkdir -p tmp/pids
+
 CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
