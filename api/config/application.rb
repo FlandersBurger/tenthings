@@ -19,5 +19,6 @@ module Tenthings
                           { namespace: 'tenthings::cache' }
 
     config.active_job.queue_adapter = :sidekiq
+    config.hosts << ENV["RAILS_HOST"]
   end
 end
